@@ -1,0 +1,65 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let carouselInterval;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.transform = `translateX(${(i - index) * 100}%)`;
+        });
+    }
+
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % totalSlides;
+        showSlide(slideIndex);
+    }
+
+    function prevSlide() {
+        slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+        showSlide(slideIndex);
+    }
+
+    function changeSlide(direction) {
+        clearInterval(carouselInterval); // Clear the current interval
+        if (direction === 1) {
+            nextSlide();
+        } else {
+            prevSlide();
+        }
+        carouselInterval = setInterval(nextSlide, 5000); // Restart the interval
+    }
+
+    function startCarousel() {
+        showSlide(slideIndex);
+        carouselInterval = setInterval(nextSlide, 5000); // Muda de slide a cada 5 segundos
+    }
+
+    // Adicionando eventos aos botões de navegação
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    if (prevButton && nextButton) {
+        prevButton.addEventListener('click', () => {
+            changeSlide(-1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            changeSlide(1);
+        });
+    } else {
+        console.error("Botões de navegação não encontrados.");
+    }
+
+    startCarousel();
+
+    // Formulário de Contato
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        console.log('Form data:', Object.fromEntries(formData));
+        alert('Formulário enviado com sucesso!');
+        form.reset();
+    });
+});
