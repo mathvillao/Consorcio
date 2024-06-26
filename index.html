@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consórcio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <img src="imagens/logo.png" alt="Logo da Empresa" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                    <li>
+                        <a href="#">Consórcio</a>
+                        <div class="dropdown-content">
+                            <a href="imoveis.html">Imóveis</a>
+                            <a href="autos.html">Autos</a>
+                            <a href="motos.html">Motos</a>
+                            <a href="pesados.html">Pesados</a>
+                            <a href="servicos.html">Serviços</a>
+                            <a href="cirurgia-plastica.html">Cirurgia Plástica</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Como Funciona</a>
+                        <div class="dropdown-content">
+                            <a href="passo-a-passo.html">Passo a Passo</a>
+                            <a href="meia-parcela.html">Meia Parcela</a>
+                        </div>
+                    </li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="carousel">
+        <div class="slides" id="slides">
+            <img src="imagens/slide1.jpg" alt="Slide 1" class="slide">
+            <img src="imagens/slide2.jpg" alt="Slide 2" class="slide">
+            <img src="imagens/slide3.jpg" alt="Slide 3" class="slide">
+        </div>
+        <button class="carousel-control prev" id="prev">&#10094;</button>
+        <button class="carousel-control next" id="next">&#10095;</button>
+    </section>
+    <section class="info-section">
+        <a href="imoveis.html">
+            <div class="info-box">
+                <h3>Consórcio de imóveis</h3>
+                <img src="imagens/info1.jpg" alt="Informação 1">
+                <p>No Consórcio de Imóveis você planeja a compra de imóveis novos ou usados, residenciais ou comerciais.</p>
+            </div>
+        </a>
+        <a href="autos.html">
+            <div class="info-box">
+                <h3>Consórcio de autos</h3>
+                <img src="imagens/info2.jpg" alt="Informação 2">
+                <p>Oferecemos as melhores opções do mercado para aquisição do seu carro, caminhão, moto, náutica e maquinário agrícola.</p>
+            </div>
+        </a>
+        <a href="cirurgia-plastica.html">
+            <div class="info-box">
+                <h3>Consórcio de cirurgia plástica</h3>
+                <img src="imagens/info3.jpg" alt="Informação 3">
+                <p>No Consórcio de Imóveis você planeja a compra de imóveis novos ou usados, residenciais ou comerciais.</p>
+            </div>
+        </a>
+    </section>
+    <section class="description">
+        <h2>Como funciona o consórcio</h2>
+        <p>Descrição detalhada de como funciona o consórcio...</p>
+    </section>
+    <section class="contact-form">
+        <h2>Contato</h2>
+        <form id="contact-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Número de Celular:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="state">Estado:</label>
+            <input type="text" id="state" name="state" required>
+            <label for="city">Cidade:</label>
+            <input type="text" id="city" name="city" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer class="footer-info">
+        <p>Informações de Contato do Vendedor</p>
+        <p>Endereço da Loja Física</p>
+        <p>Horário de Atendimento</p>
+        <img src="imagens/logo.png" alt="Logo da Empresa" class="logo-footer">
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
