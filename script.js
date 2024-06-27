@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     let slideIndex = 0;
-    const slides = document.querySelectorAll('.slide');
+    const slides = document.querySelectorAll('#slides .carousel-image');
     const totalSlides = slides.length;
     let carouselInterval;
 
@@ -21,21 +21,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     function changeSlide(direction) {
-        clearInterval(carouselInterval); // Clear the current interval
+        clearInterval(carouselInterval);
         if (direction === 1) {
             nextSlide();
         } else {
             prevSlide();
         }
-        carouselInterval = setInterval(nextSlide, 5000); // Restart the interval
+        carouselInterval = setInterval(nextSlide, 5000);
     }
 
     function startCarousel() {
         showSlide(slideIndex);
-        carouselInterval = setInterval(nextSlide, 5000); // Muda de slide a cada 5 segundos
+        carouselInterval = setInterval(nextSlide, 5000);
     }
 
-    // Adicionando eventos aos botões de navegação
     const prevButton = document.getElementById('prev');
     const nextButton = document.getElementById('next');
 
@@ -63,3 +62,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
         form.reset();
     });
 });
+
